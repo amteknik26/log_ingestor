@@ -1,16 +1,13 @@
-# Hi! Thanks for taking time to review my project. If there are any discrepancies please feel free to contact me using the info below.
+# Log Ingest and Query
 Email : amaan5800@gmail.com
-Phone : +91 9632309787
 
 # Attention Please 
 Ideally I would run the 3 different microservices that I had written using docker containers. 
-But because I got the assignment on Saturday afternoon, I had to compromise on few features because of time constraint. 
-Thank you for understanding. 
+Its coming soon.
 
 # Video and Guide
 I have put the video-guide, demonstration and system design in the link below. Please check it out
 https://drive.google.com/drive/folders/1j9SSSBWZZ6cMGaH41L_ZRuPemEH94qf-?usp=drive_link
-
 
 # Setup
 
