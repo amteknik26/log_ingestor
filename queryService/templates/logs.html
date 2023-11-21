@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log Viewer</title>
+</head>
+<body>
+    <h1>Log Viewer</h1>
+    <h5>Dyte Assignment - Amaan</h5>
+
+    {% if error_message %}
+    <div style="color: red;">{{ error_message }}</div>
+    {% endif %}
+
+    <form action="/" method="get">
+        <label for="level">Level:</label>
+        <input type="text" name="level" placeholder="Enter level">
+
+        <label for="message">Message:</label>
+        <input type="text" name="message" placeholder="Enter message">
+
+        <label for="resourceId">Resource ID:</label>
+        <input type="text" name="resourceId" placeholder="Enter Resource ID">
+
+        <!-- <label for="timestamp">Timestamp:</label>
+        <input type="text" name="timestamp" placeholder="Enter Timestamp"> -->
+
+        <label for="start_date">Start Date:</label>
+        <input type="date" name="start_date">
+
+        <label for="end_date">End Date:</label>
+        <input type="date" name="end_date">
+
+        <br>
+
+        <label for="traceId">Trace ID:</label>
+        <input type="text" name="traceId" placeholder="Enter Trace ID">
+
+        <label for="spanId">Span ID:</label>
+        <input type="text" name="spanId" placeholder="Enter Span ID">
+
+        <label for="commit">Commit:</label>
+        <input type="text" name="commit" placeholder="Enter Commit">
+
+        <label for="parentResourceId">Parent Resource ID:</label>
+        <input type="text" name="parentResourceId" placeholder="Enter Parent Resource ID">
+
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Display the logs in a more readable forma -->
+    <ul>
+        {% for log in logs %}
+            <li>
+                Level: {{ log[1] }}<br>
+                Message: {{ log[2] }}<br>
+                Resource ID: {{ log[3] }}<br>
+                Timestamp: {{ log[4].strftime('%Y-%m-%d %H:%M:%S UTC') }}<br>
+                Trace ID: {{ log[5] }}<br>
+                Span ID: {{ log[6] }}<br>
+                Commit: {{ log[7] }}<br>
+                Parent Resource ID: {{ log[8] }}<br>
+            </li>
+            <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
